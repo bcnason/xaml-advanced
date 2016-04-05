@@ -10,6 +10,11 @@
     <Page.DataContext>
         <models:OrderDataManager />
     </Page.DataContext>
+    <Page.Resources>
+        <ControlTemplate x:Key="ButtonCustomTemplate" TargetType="Button" >
+            <ContentPresenter CornerRadius="20" Background="{TemplateBinding Background}" Padding="10" />
+        </ControlTemplate>
+    </Page.Resources>
     <Page.TopAppBar>
         <AppBar>
             <AppBarButton Label="Home" Click="MainPage_Click">
@@ -38,7 +43,7 @@
         <TextBox Grid.Row="3" Grid.Column="1" />
         <ListView Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Margin="10" ItemsSource="{Binding MenuItems}" DisplayMemberPath="Title" />
         <ListView Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Margin="10" ItemsSource="{Binding CurrentlySelectedMenuItems}" DisplayMemberPath="Title" />
-        <Button Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" />
-        <Button Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Button Content="Add to Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Template="{StaticResource ButtonCustomTemplate}"/>
+        <Button Content="Submit Order" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Template="{StaticResource ButtonCustomTemplate}"/>
     </Grid>
 </Page>
