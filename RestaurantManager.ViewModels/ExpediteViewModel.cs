@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using RestaurantManager.Models;
 
-namespace RestaurantManager.Models
+namespace RestaurantManager.ViewModels
 {
-    public class ExpediteDataManager : DataManager
+    public class ExpediteDataManager : ViewModel
     {
         private List<Order> _orderItems;
 
@@ -22,7 +23,7 @@ namespace RestaurantManager.Models
             {
                 if(value != null)
                 _orderItems = value;
-                this.OnPropertyChanged();
+                this.NotifyPropertyChanged();
             }
         }
     }

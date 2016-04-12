@@ -14,5 +14,10 @@ namespace RestaurantManager.UniversalWindows
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void ListView_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
